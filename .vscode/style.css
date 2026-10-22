@@ -1,0 +1,130 @@
+*{
+    /*o browser já nos dá algumas medidas padrões em algumas partes da tela, e para tirarmos isso, utilizamos o 
+    seletor universal e tiramos todas os margins e paddins, assim, tirando qualquer espaço que o navegador tenha 
+    adicionado automaticamente*/
+    margin: 0;
+    padding: 0; /*preenchimento interno*/
+    box-sizing: border-box;   /*serve para sempre mantermos a largura a qual selecionamos, ou seja, as bordas 
+    irão impedir que o padding cubra os pixels da largura, tendo que se virar para se encaixar dentro da width*/
+}
+
+body{
+    /*
+    background-image: url(./assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    /* em qualquer imagem na qual formos adicionar, temos de pensar que se tem o 
+    eixo x (vertical) e eixo y (horizontal), isso serve de base pasa trabalharmos 
+    para quaisquer tipos de imagens, selecionando onde em qual direção queremos trabalhar */
+/*
+    background-size: cover; /*irá denominar o tamanho e como queremos deixar a imagem na tela*/
+    /* o COVER serve para preencher espaço em branco na tela para que funcione tanto em mobile quanto 
+    em desktop */
+
+    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    /*podemos juntar todas as linhas de código feita em etapas em apenas uma
+    linha de código, trazendo assim mais leveza para a página*/
+}
+
+body *{ /*o asterisco funciona como um símbolo universal, ou seja, funcionará em todos os elementos a partir da tag que 
+    eu coloquei para que ele funcionasse*/
+    font-family: "Inter", sans-serif;
+    color: rgb(254, 254, 254);
+}
+
+#container{
+    width: 360px; /*largura*/
+    /*height: 712px; /*altura (opcional, pois a altura acompanha o tamanho da caixa, ou seja, a caixa é 
+    completamente maleável*/
+    /*border: 1px solid red;*/
+    margin: auto; /*calcula o espaço vazio, o divide pela metade e espaça por igual em ambos os lados
+    e ele pode ser mais específico também, podendo selecionar topo, em baixo, ou as laterais*/
+    margin-top: 56px;
+}
+
+/*display (block: ocupa toda uma largura definida, ou seja, 
+se houver largura pré definida, será daquele tamanho, 
+se não houver, ocupará toda a tela), (none: não mostrará nada na tela), (inline: que é em linha, ou 
+seja, ficam geralmente um ao lado do outro) é a vizualização de algo*/
+
+/*imagem é um elemento inline, div é um elemento block, pois ocupa toda uma linha/espaço*/
+
+/*não conseguimos aplicar MARGIN em uma imagem, pois MARGIN não funciona em elementos INLINE
+Outra maneira também, podemos pegar a o ID pai e aplicarmos "text-align:" como no exemplo abaixo
+Ou aplicamos DISPLAY BLOCK onde iremos trabalhar a imagem*/
+
+#profile{
+    text-align: center;
+    padding: 24px; /*é um preenchimento que ocupa todos os lados da caixa, ou seja, preenche em cima, em baixo e pelas 
+    laterais*/
+}
+
+#profile img{
+    /*o img busca a tag imagem que foi selecionada no html*/
+    width: 90px;
+}
+
+#profile p{
+    font-weight: 500;
+    line-height: 24px; /*altura de linha*/
+    /*font-size: 16px; font-size irá ficar para momentos específicos, pois como todas os textos vem com o padrão 
+    de tamanho 16px, não precisamos altera a não ser que haja necessidade*/
+    margin-top: 8px;
+}
+
+/* LINKS*/
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+
+ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    text-decoration: none; /*serve para retirar, alterar ou inserir a linha que fica no texto*/
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+/* pseudo-selector*/
+ul li a:hover{ /*:hover realiza ações onde passamos o mouser em cima*/
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid white;
+}
+
+/*social links*/
+
+#social-links{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 24px 0;
+    font-size: 24px;
+
+}
+
+#social-links a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 16px;
+    border-radius: 50%;
+}
+
+/*display flex: funciona para conseguir adaptar os elementos dentro de uma caixa
+gap: coloca um espaço entre os elementos
+flex-direction: podemos mudar as posições de elementos 
+
+justify-content: center; - alinhar ao meio (text-align: center; - funciona igual para textos)
+align-itens: center; - alinha o conteúdo no centro da linha MAIN = eixo principal (linha que fica ao meio de 
+uma caixa criada por flex)
+*/

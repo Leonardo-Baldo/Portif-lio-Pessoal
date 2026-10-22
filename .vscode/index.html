@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- tipo de documento -->
+
+<html lang="pt-br"> <!-- linguagem -->
+
+<!-- head, body, etc podem ser chamados de nós, ou filhos -->
+
+<head> <!-- responsável em ajustar as configurações da página -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8"> <!-- permite caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- viewport = tudo o que é visível, content é o conteúdo do dispositivo "width=device-width", 
+    ou seja, gera uma adaptabilidade -->
+    <title>PROJETO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="profile">
+            <img src="./assets/L.png" alt="Marca L">
+            <p>@leob_3005</p>
+        </div>
+        <ul> <!--serve para que possamos criar listas não ordenadas (apenas com pontos na frente do que formos escrever, 
+            que podem ser retirados depois)
+            
+            E se caso fosse uma <ol>, seria uma lista ordenada, com números na frente do que formos escrever-->
+            <li> <!--item da lista-->
+                <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+            </li>
+            <!--target:"_blank" serve para quando alguém clicar em algum link, ela seja redirecionada em uma aba nova, 
+            deixando o nosso site ainda aberto-->
+            <li>
+                <a href="https://www.nuuvem.com/br-pt" target="_blank">Nuuvem Games</a>
+            </li>
+            <li>
+                <a href="https://claude.ai/new" target="_blank">Claude AI</a>
+            </li>
+            <li>
+                <a href="https://app.rocketseat.com.br/?type=ALL" target="_blank">RocketSeat</a>
+            </li>
+        </ul>
+        <div id="social-links">
+            <a href="https://github.com/Leonardo-Baldo" target="_blank">
+            <ion-icon name="logo-github"></ion-icon>
+            </a>
+
+            <a href="https://www.instagram.com/leob_3005/?hl=en" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank">
+            <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+
+            <a href="https://www.linkedin.com/in/leonardo-baldo-ab0b4a282/" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+        </div>
+    </div>
+    <!-- <div> é uma caixa genérica que o browser não aplica estilos
+        e id é o "RG" da div -->
+
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>
+
+<!--tudo dentro do HTML e CSS são caixas, e elas podem estar juntas, por exemplos: tenho um id container, 
+ele é uma caixa, e dentro dele posso ter outros id's, etc que também serão caixas-->
+
+<!--sites: caniuse.com - procurar códigos que mais combinem com o browser-->
+
+<!--estudar mais sobre o DevTools-->
